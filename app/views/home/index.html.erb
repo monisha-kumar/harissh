@@ -1,0 +1,24 @@
+<div  style="text-align :center;">
+
+<h1>Employee Management System</h1>
+  <% unless admin_signed_in? or employee_signed_in? %>
+
+<%= button_to 'Employee_login', employee_session_path %> <br>
+  <%= button_to 'Admin_login', admin_session_path %>
+<% end %>
+
+
+  <% if admin_signed_in? %>
+ <%= render 'emp_list' %>
+    <% end %>
+
+  <% if admin_signed_in? %> <br>
+    <button><%= link_to 'Add new Employee', new_employee_registration_path, class:"btn btn-primary" %></button>
+  <%end %>
+</div>
+
+  <% if  employee_signed_in? %>
+  <%= render 'employee_in' %>
+    <%end %>
+
+

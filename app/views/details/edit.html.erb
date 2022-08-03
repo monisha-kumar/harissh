@@ -1,0 +1,62 @@
+<%= form_with(scope: :employee,url: detail_path(@employee), method: :put , local: true ) do |f| %>
+<%#= form_with(model: @detail) do |f| %>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, class:"form-label form-control form-control-lg", placeholder: "Name"  %>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :ph_no %><br />
+    <%= f.text_field :ph_no, class:"form-label form-control form-control-lg", placeholder: "Phone number"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :dob %><br />
+    <%= f.date_field :dob, class:"form-label form-control form-control-lg", placeholder: "dob"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, class:"form-label form-control form-control-lg", placeholder: "email"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :experience %><br />
+    <%= f.text_field :experience, class:"form-label form-control form-control-lg", placeholder: "Experience"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :f_name %><br />
+    <%= f.text_field :f_name, class:"form-label form-control form-control-lg", placeholder: "Father's name"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :m_name %><br />
+    <%= f.text_field :m_name, class:"form-label form-control form-control-lg", placeholder: "Mother's name"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, class:"form-label form-control form-control-lg", placeholder: "Address"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" , class:"btn btn-success" %>
+  </div>
+<% end %>
+<br>
+<br>
+<p>
+  <button><%= link_to 'Prev Page',detail_path(@employee.id), type:"button", class:"btn btn-primary" %></button>
+</p>
+
+
+
+
+
+
+
+<!--<button><%#= link_to 'Edit Qualification', edit_qualification_path(@employee.qualification.id), type:"button", class:"btn btn-primary"%></button>-->
+<!--<button><%#= link_to 'Edit Leave', edit_leafe_path(@employee.leave.id), type:"button", class:"btn btn-primary" %></button>-->
+<!--<button><%#= link_to 'Edit Salary', edit_salary_path(@employee.salary.id), type:"button", class:"btn btn-primary" %></button>-->

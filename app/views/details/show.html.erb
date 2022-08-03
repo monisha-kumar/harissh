@@ -1,0 +1,141 @@
+
+<h2 style="text-align: center">Employee Details</h2>
+<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+  <style>
+      table, th, td {
+          width: 35%;
+          margin: auto;
+          border: 2px solid black;
+          border-collapse: collapse;
+
+      }
+
+  </style>
+  <tbody>
+  <tr>
+    <th>Name:</th>
+    <td><%= @employee.detail.name %></td>
+  </tr>
+  <tr>
+    <th>Date of Birth:</th>
+    <td><%= @employee.detail.dob %></td>
+  </tr>
+  <tr>
+    <th>Phone number:</th>
+    <td><%= @employee.detail.ph_no %></td>
+  </tr>
+  <tr>
+    <th>Email:</th>
+    <td><%= @employee.detail.email %></td>
+  </tr>
+
+  <tr>
+    <th>Mother's Name:</th>
+    <td><%= @employee.detail.m_name %></td>
+  </tr>
+  <tr>
+    <th>Father's Name:</th>
+    <td><%= @employee.detail.f_name %></td>
+  </tr>
+  <tr>
+    <th>Address:</th>
+    <td><%= @employee.detail.address %></td>
+  </tr>
+  <tr>
+    <th>Experience:</th>
+    <td><%= @employee.detail.experience%></td>
+  </tr>
+
+  </tbody>
+</table>
+<p style="text-align: center">
+<td> <button><%= link_to 'Edit', edit_detail_path(@employee.id), class:"btn btn-secondary"%> </button></td>
+</p>
+<!--<h5>-----------------------------------------------------------------</h5>-->
+
+<h2 style="text-align: center"><b>Qualification details</b></h2>
+<table>
+  <tbody>
+  <tr>
+    <th>Stream:</th>
+    <td><%= @employee.qualification.stream %></td>
+  <tr>
+    <th>Year Of Passes Out:</th>
+    <td><%= @employee.qualification.yop %></td>
+  </tr>
+  <tr>
+    <th>Project:</th>
+    <td><%= @employee.qualification.project %></td>
+  </tr>
+  <tr>
+    <th>Aggregate</th>
+    <td><%= @employee.qualification.aggregate %></td>
+  </tr>
+  </tbody>
+</table>
+<p style="text-align: center">
+<td> <button><%= link_to 'Edit', edit_qualification_path(@employee.qualification.id), class:"btn btn-secondary"%></button> </td>
+</p>
+<!--<h5>-----------------------------------------------------------------</h5>-->
+<h2 style="text-align: center"><b>Salary Details</b></h2>
+<table>
+  <tbody>
+  <tr>
+    <th>Basic_pay:</th>
+    <td><%= @employee.salary.basic_pay%></td>
+  <tr>
+    <th>HRA:</th>
+    <td><%= @employee.salary.hra %></td>
+  </tr>
+  <tr>
+    <th>Allowance:</th>
+    <td><%= @employee.salary.allowance %></td>
+  </tr>
+  <tr>
+    <th>Deduction:</th>
+    <td><%= @employee.salary.deduction %></td>
+  </tr>
+  <tr>
+    <th>Total salary:</th>
+    <td><%= @employee.salary.basic_pay.to_i + @employee.salary.hra.to_i + @employee.salary.allowance.to_i - @employee.salary.deduction.to_i %></td>
+  </tr>
+  </tbody>
+</table>
+<p style="text-align: center">
+<button><%= link_to 'Edit Salary', edit_salary_path(@employee.salary.id), type:"button", class:"btn btn-primary" %></button>
+</p>
+<!--<h5>-------------------------------------------------------</h5></br>-->
+<h2 style="text-align: center"><b>Leave Details</b></h2>
+<table>
+  <tbody>
+  <tr>
+    <th>Sick:</th>
+    <td><%= @employee.leave.sick %></td>
+  <tr>
+    <th>privileged:</th>
+    <td><%= @employee.leave.privileged %></td>
+  </tr>
+  <tr>
+    <th>breavement:</th>
+    <td><%= @employee.leave.breavement %></td>
+  </tr>
+  <tr>
+    <th>study_leave</th>
+    <td><%= @employee.leave.study_leave %></td>
+  </tr>
+  <tr>
+    <th>time_off</th>
+    <td><%= @employee.leave.time_off %></td>
+  </tr>
+
+  </tbody>
+</table>
+<p style="text-align: center">
+<button><%= link_to 'Apply Leave', edit_leafe_path(@employee.leave.id), type:"button", class:"btn btn-primary" %></button><br/>
+</p>
+<p style="text-align: center">
+<button><%= link_to 'Prev Page',details_path(@employee.id), type:"button", class:"btn btn-primary" %></button>
+</p>
+
+
+

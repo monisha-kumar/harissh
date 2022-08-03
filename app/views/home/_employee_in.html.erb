@@ -1,0 +1,149 @@
+<h2 style="text-align: center">Basic Details</h2>
+<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+  <style>
+
+      table, th, td {
+          width: 35%;
+          margin: auto;
+          border: 2px solid black;
+          border-collapse: collapse;
+
+
+      }
+
+
+  </style>
+  <tbody>
+  <tr>
+    <th>Name:</th>
+    <td><%= @one_employee.detail.name %></td>
+  </tr>
+  <tr>
+    <th>Date of Birth:</th>
+    <td><%=@one_employee.detail.dob %></td>
+  </tr>
+  <tr>
+    <th>Phone number:</th>
+    <td><%= @one_employee.detail.ph_no %></td>
+  </tr>
+  <tr>
+    <th>Email:</th>
+    <td><%= @one_employee.detail.email %></td>
+  </tr>
+
+  <tr>
+    <th>Mother's Name:</th>
+    <td><%= @one_employee.detail.m_name %></td>
+  </tr>
+  <tr>
+    <th>Father's Name:</th>
+    <td><%= @one_employee.detail.f_name %></td>
+  </tr>
+  <tr>
+    <th>Address:</th>
+    <td><%= @one_employee.detail.address %></td>
+  </tr>
+  <tr>
+    <th>Experience:</th>
+    <td><%= @one_employee.detail.experience%></td>
+  </tr>
+
+  </tbody>
+</table>
+<p style="text-align: center">
+<td> <button><%= link_to 'Edit', edit_detail_path(@one_employee.id), class:"btn btn-secondary"%> </button></td>
+</p>
+<!--<h5>-----------------------------------------------------------------</h5>-->
+
+<h3 style="text-align: center"><b>Qualification details</b></h3>
+<table>
+  <tbody>
+  <tr>
+    <th>Stream:</th>
+    <td><%= @one_employee.qualification.stream %></td>
+  <tr>
+    <th>Year Of Passes Out:</th>
+    <td><%=@one_employee.qualification.yop %></td>
+  </tr>
+  <tr>
+    <th>Project:</th>
+    <td><%= @one_employee.qualification.project %></td>
+  </tr>
+  <tr>
+    <th>Aggregate</th>
+    <td><%= @one_employee.qualification.aggregate %></td>
+  </tr>
+  </tbody>
+</table>
+<p style="text-align: center">
+<td> <button><%= link_to 'Edit', edit_qualification_path(@one_employee.qualification.id), class:"btn btn-secondary"%></button> </td>
+</p>
+<!--<h5>-----------------------------------------------------------------</h5>-->
+<h3 style="text-align: center"><b>Salary Details</b></h3>
+<table>
+  <tbody>
+  <tr>
+    <th>Basic_pay:</th>
+    <td><%=@one_employee.salary.basic_pay%></td>
+  <tr>
+    <th>HRA:</th>
+    <td><%= @one_employee.salary.hra %></td>
+  </tr>
+  <tr>
+    <th>Allowance:</th>
+    <td><%= @one_employee.salary.allowance %></td>
+  </tr>
+  <tr>
+    <th>Deduction:</th>
+    <td><%= @one_employee.salary.deduction %></td>
+  </tr>
+  <tr>
+    <th>Total salary:</th>
+    <td><%= @one_employee.salary.basic_pay.to_i + @one_employee.salary.hra.to_i + @one_employee.salary.allowance.to_i - @one_employee.salary.deduction.to_i %></td>
+  </tr>
+  </tbody>
+</table>
+<!--<button><%#= link_to 'Edit Salary', edit_salary_path(@employee.salary.id), type:"button", class:"btn btn-primary" %></button>-->
+
+<!--<h5>-------------------------------------------------------</h5></br>-->
+<h3 style="text-align: center"><b>Leave Details</b></h3>
+<table>
+  <tbody>
+  <tr>
+    <th>Sick:</th>
+    <td><%=@one_employee.leave.sick %></td>
+  <tr>
+    <th>privileged:</th>
+    <td><%=@one_employee.leave.privileged %></td>
+  </tr>
+  <tr>
+    <th>breavement:</th>
+    <td><%= @one_employee.leave.breavement %></td>
+  </tr>
+  <tr>
+    <th>study_leave</th>
+    <td><%= @one_employee.leave.study_leave %></td>
+  </tr>
+  <tr>
+    <th>time_off</th>
+    <td><%= @one_employee.leave.time_off %></td>
+  </tr>
+
+  </tbody>
+</table>
+
+
+<!--<label for="cars">Apply Leave:</label>-->
+
+<!--<select name="reason" id="reasons">-->
+<!--  <option value="sick<">sick</option>-->
+<!--  <option value="maternity">maternity</option>-->
+<!--  <option value="study_leave">study_leave</option>-->
+<!--  <option value="breavement">breavement</option>-->
+</select>
+<!--<button><%#= link_to 'Apply Leave', edit_leafe_path(@employee.leave.id), type:"button", class:"btn btn-primary" %></button><br/>-->
+<p>
+<!--  <button><%#= link_to 'Prev Page',details_path(@employee.id), type:"button", class:"btn btn-primary" %></button>-->
+</p>
+
+

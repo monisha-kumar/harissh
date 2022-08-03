@@ -1,0 +1,77 @@
+<!--<div class="container py-5 h-50 w-50">-->
+<!--  <div class="row d-flex justify-content-center align-items-center h-100">-->
+<!--    <div>-->
+<!--      <div class="card bg-dark text-white" style="border-radius: 1rem;">-->
+<!--        <div class="card-body p-5 text-center" >-->
+          <h2 class="fw-bold mb-2 text-uppercase">Edit Leave</h2>
+<!--          <div class="mb-md-5 mt-md-4 pb-5">-->
+
+
+            <%= form_with model: @leave do |f| %>
+
+              <div class="form-outline form-white mb-4">
+                <%= f.label :sick %><br />
+                <%= f.text_field :sick, class:"form-label form-control form-control-lg"%>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <%= f.label :privileged %><br />
+                <%= f.text_field :privileged, class:"form-label form-control form-control-lg"%>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <%= f.label :breavement %><br />
+                <%= f.text_field :breavement, class:"form-label form-control form-control-lg"%>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <%= f.label :study_leave %><br />
+                <%= f.text_field :study_leave, class:"form-label form-control form-control-lg"%>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <%= f.label :time_off %><br />
+                <%= f.text_field :time_off, class:"form-label form-control form-control-lg"%>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <%= f.label :maternity %><br />
+                <%= f.text_field :maternity, class:"form-label form-control form-control-lg"%>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <%= f.label :paternity %><br />
+                <%= f.telephone_field :paternity, class:"form-label form-control form-control-lg"%>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <%= f.label :optional %><br />
+                <%= f.text_field :optional, class:"form-label form-control form-control-lg"%>
+              </div>
+
+              <div class="actions">
+                <%= f.submit "Update" , class:"btn btn-success" %>
+              </div>
+            <% end %>
+            <br>
+            <br>
+
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+

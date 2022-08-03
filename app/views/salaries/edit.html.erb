@@ -1,0 +1,37 @@
+<%= form_with model: @salary do |f| %>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :basic_pay %><br />
+    <%= f.text_field :basic_pay, class:"form-label form-control form-control-lg"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :hra %><br />
+    <%= f.text_field :hra, class:"form-label form-control form-control-lg"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :allowance %><br />
+    <%= f.text_field :allowance, class:"form-label form-control form-control-lg"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :deduction %><br />
+    <%= f.text_field :deduction, class:"form-label form-control form-control-lg"%>
+  </div>
+
+  <div class="form-outline form-white mb-4">
+    <%= f.label :total_salary %><br />
+    <%= f.text_field :total_salary, class:"form-label form-control form-control-lg"%>
+  </div>
+
+<p>
+  <div class="actions">
+    <%= f.submit "Update" , class:"btn btn-success" %>
+  </div></p>
+<% end %>
+
+
+
+
+

@@ -1,0 +1,14 @@
+<%= form_with(model: @qualification, local: true ) do |f| %>
+  <%= f.label :stream %><br />
+  <%= f.text_field :stream, class:"form-label form-control form-control-lg", placeholder: "Stream"  %><br/>
+  <%= f.label :yop %><br />
+  <%= f.text_field :yop, class:"form-label form-control form-control-lg", placeholder: "YOP"%><br/>
+  <%= f.label :project %><br />
+  <%= f.text_field :project, class:"form-label form-control form-control-lg", placeholder: "Project"%><br/>
+  <%= f.label :aggregate %><br />
+  <%= f.text_field :aggregate, class:"form-label form-control form-control-lg", placeholder: "Aggregate"%><br/>
+  <p></p>
+  <%= f.submit "Update" , class:"btn btn-success" %></p>
+<% end %>
+
+<br>
