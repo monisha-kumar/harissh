@@ -26,8 +26,9 @@ class DetailsController < ApplicationController
   end
 
   def update
-    @employee =Employee.find(params[:id])
-    @detail= @employee.detail
+
+    # @employee =Employee.find(params[:id])
+    @detail= Detail.find(params[:id])
     if @detail.update(emp_params)
     flash[:notice] = "Employee details was updated successfully"
     redirect_to root_path
@@ -46,7 +47,7 @@ class DetailsController < ApplicationController
 
   private
   def emp_params
-    params.require(:employee).permit(:name, :dob, :ph_no, :experience,:f_name, :email,:employee_id,:m_name, :address)
+    params.require(:detail).permit(:name, :dob, :ph_no, :experience,:f_name, :email,:m_name, :address)
   end
 
 

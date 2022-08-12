@@ -1,55 +1,83 @@
-<%= form_with(scope: :employee,url: detail_path(@employee), method: :put , local: true ) do |f| %>
-<%#= form_with(model: @detail) do |f| %>
+<%#= form_with(scope: :employee,url: detail_path(@detail), method: :put , local: true ) do |f| %>
+  <%#= form_with(model: @employee) do |f| %>
+<%= form_with(model: @detail, method: :put, local: true)do |f| %>
+  <font color="#f5f5f5"><h1 style="text-align: center"> Personal Details</h1></font>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, class:"form-label form-control form-control-lg", placeholder: "Name"  %>
+    <p style="text-align: center">
+      <font color="#f5f5f5">
+      <%= f.label :name %><br /> </font>
+    <%= f.text_field :name,required:true,class:"form-label form-control form-control-lg", placeholder: "Name"  %>
+    </p>
+  </div>
+
+
+  <div class="form-outline form-white mb-4">
+
+    <p style="text-align: center">
+      <font color="#f5f5f5">
+        <%= f.label :phone_number %><br /></font>
+    <%= f.text_field :ph_no,required:true, class:"form-label form-control form-control-lg", placeholder: "Phone number"%>
+    </p>
+  </div>
+
+
+  <div class="form-outline form-white mb-4">
+    <p style="text-align: center">
+      <font color="#f5f5f5">
+        <%= f.label :dob %><br /></font>
+      <%= f.text_field :dob, required:true,class:"form-label form-control form-control-lg", placeholder: "dob"%>
+    </p>
   </div>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :ph_no %><br />
-    <%= f.text_field :ph_no, class:"form-label form-control form-control-lg", placeholder: "Phone number"%>
+    <p style="text-align: center">
+      <font color="#f5f5f5">
+        <%= f.label :email %><br /></font>
+    <%= f.email_field :email,required:true, class:"form-label form-control form-control-lg", placeholder: "email"%>
+    </p>
   </div>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :dob %><br />
-    <%= f.date_field :dob, class:"form-label form-control form-control-lg", placeholder: "dob"%>
-  </div>
-
-  <div class="form-outline form-white mb-4">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, class:"form-label form-control form-control-lg", placeholder: "email"%>
-  </div>
-
-  <div class="form-outline form-white mb-4">
+    <p style="text-align: center">
     <%= f.label :experience %><br />
-    <%= f.text_field :experience, class:"form-label form-control form-control-lg", placeholder: "Experience"%>
+    <%= f.text_field :experience,required:true, class:"form-label form-control form-control-lg", placeholder: "Experience"%>
+    </p>
   </div>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :f_name %><br />
-    <%= f.text_field :f_name, class:"form-label form-control form-control-lg", placeholder: "Father's name"%>
+    <p style="text-align: center">
+    <%= f.label :Father_Name %><br />
+    <%= f.text_field :f_name,required:true, class:"form-label form-control form-control-lg", placeholder: "Father's name"%>
+    </p>
   </div>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :m_name %><br />
-    <%= f.text_field :m_name, class:"form-label form-control form-control-lg", placeholder: "Mother's name"%>
+    <p style="text-align: center">
+    <%= f.label :Mother_Name %><br />
+    <%= f.text_field :m_name,required:true, class:"form-label form-control form-control-lg", placeholder: "Mother's name"%>
+    </p>
   </div>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :address %><br />
-    <%= f.text_field :address, class:"form-label form-control form-control-lg", placeholder: "Address"%>
+    <p style="text-align: center">
+    <%= f.label :Address %><br />
+    <%= f.text_field :address,required:true, class:"form-label form-control form-control-lg", placeholder: "Address"%>
+    </p>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" , class:"btn btn-success" %>
+    <p style="text-align: center">
+    <%= f.submit  %>
+    </p>
   </div>
 <% end %>
 <br>
 <br>
 <p>
-  <button><%= link_to 'Prev Page',detail_path(@employee.id), type:"button", class:"btn btn-primary" %></button>
+  <button><%= link_to 'Prev Page', :back, type:"button", class:"btn btn-primary" %></button>
 </p>
+
 
 
 

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Harissh</title>
+
+    <title>EMS</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+        body {
+            background-image: url('https://shiftin.app/wp-content/uploads/2021/10/what-are-employee-management-systems.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+    </style>
   </head>
 
   <body  style="background-color:lightcyan;">
+
   <% if employee_signed_in? %>
-  <%=link_to 'logout', destroy_employee_session_path,method: :delete%>
+    <div style="text-align:end"> <button><%=link_to 'logout', destroy_employee_session_path,method: :delete%></button></div>
   <%end %>
   <% if admin_signed_in? %>
-    <%=link_to 'logout', destroy_admin_session_path,method: :delete%>
+    <button><%=link_to 'logout', destroy_admin_session_path,method: :delete%></button>
   <%end %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_29_072018) do
+ActiveRecord::Schema.define(version: 2022_08_10_102012) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,6 +25,13 @@ ActiveRecord::Schema.define(version: 2022_07_29_072018) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "attendances", force: :cascade do |t|
+    t.string "present"
+    t.string "absent"
+    t.string "total"
+    t.string "employee_id"
   end
 
   create_table "details", force: :cascade do |t|
@@ -59,6 +69,11 @@ ActiveRecord::Schema.define(version: 2022_07_29_072018) do
     t.string "paternity", default: "7"
     t.string "optional", default: "5"
     t.integer "employee_id"
+    t.string "type_of_leave"
+    t.date "from_date"
+    t.date "to_date"
+    t.string "days"
+    t.string "status"
     t.index ["employee_id"], name: "index_leaves_on_employee_id"
   end
 

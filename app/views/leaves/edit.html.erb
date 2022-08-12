@@ -3,55 +3,76 @@
 <!--    <div>-->
 <!--      <div class="card bg-dark text-white" style="border-radius: 1rem;">-->
 <!--        <div class="card-body p-5 text-center" >-->
-          <h2 class="fw-bold mb-2 text-uppercase">Edit Leave</h2>
+<font color="#f5f5f5"> <h2 style="text-align: center">Edit Leave</h2></font>
 <!--          <div class="mb-md-5 mt-md-4 pb-5">-->
 
 
             <%= form_with model: @leave do |f| %>
 
-              <div class="form-outline form-white mb-4">
-                <%= f.label :sick %><br />
-                <%= f.text_field :sick, class:"form-label form-control form-control-lg"%>
-              </div>
 
               <div class="form-outline form-white mb-4">
-                <%= f.label :privileged %><br />
+                <p style="text-align: center">
+                  <font color="#f5f5f5">
+                    <%= f.label :sick %><br /></font>
+
+                  <%= f.text_field :sick, class:"form-label form-control form-control-lg"%>
+                </p></div>
+
+              <div class="form-outline form-white mb-4">
+                <p style="text-align: center">
+                  <font color="#f5f5f5">
+                    <%= f.label :privileged %><br /></font>
                 <%= f.text_field :privileged, class:"form-label form-control form-control-lg"%>
-              </div>
+                </p></div>
 
               <div class="form-outline form-white mb-4">
-                <%= f.label :breavement %><br />
+                <p style="text-align: center">
+                  <font color="#f5f5f5">
+                    <%= f.label :breavement %><br /></font>
                 <%= f.text_field :breavement, class:"form-label form-control form-control-lg"%>
-              </div>
+                </p></div>
 
               <div class="form-outline form-white mb-4">
-                <%= f.label :study_leave %><br />
+                <p style="text-align: center">
+                  <font color="#f5f5f5">
+                    <%= f.label :study_leave %><br /></font>
                 <%= f.text_field :study_leave, class:"form-label form-control form-control-lg"%>
-              </div>
+                </p></div>
 
               <div class="form-outline form-white mb-4">
-                <%= f.label :time_off %><br />
+                <p style="text-align: center">
+                  <font color="#f5f5f5">
+                    <%= f.label :time_off %><br /></font>
                 <%= f.text_field :time_off, class:"form-label form-control form-control-lg"%>
-              </div>
+                </p></div>
 
               <div class="form-outline form-white mb-4">
-                <%= f.label :maternity %><br />
+                <p style="text-align: center">
+                  <font color="#f5f5f5">
+                    <%= f.label :maternity %><br /></font>
                 <%= f.text_field :maternity, class:"form-label form-control form-control-lg"%>
-              </div>
+                </p></div>
 
               <div class="form-outline form-white mb-4">
-                <%= f.label :paternity %><br />
+                <p style="text-align: center">
+                  <font color="#f5f5f5">
+                    <%= f.label :paternity %><br /></font>
                 <%= f.telephone_field :paternity, class:"form-label form-control form-control-lg"%>
+                </p>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <%= f.label :optional %><br />
+                <p style="text-align: center">
+
+                    <%= f.label :optional %><br />
                 <%= f.text_field :optional, class:"form-label form-control form-control-lg"%>
+                </p>
               </div>
 
               <div class="actions">
+                <p style="text-align: center">
                 <%= f.submit "Update" , class:"btn btn-success" %>
-              </div>
+                </p></div>
             <% end %>
             <br>
             <br>

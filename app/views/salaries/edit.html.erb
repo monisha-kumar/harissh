@@ -1,33 +1,46 @@
 <%= form_with model: @salary do |f| %>
+  <font color="#f5f5f5" xmlns="http://www.w3.org/1999/html"> <h1 style="text-align: center">Calculate Salary</h1></font>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :basic_pay %><br />
-    <%= f.text_field :basic_pay, class:"form-label form-control form-control-lg"%>
+    <p style="text-align: center">
+      <font color="#f5f5f5">
+        <%= f.label :basic_pay %><br /></font>
+      <%= f.text_field :basic_pay, class:"form-label form-control form-control-lg"%></p>
   </div>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :hra %><br />
-    <%= f.text_field :hra, class:"form-label form-control form-control-lg"%>
+    <p style="text-align: center">
+      <font color="#f5f5f5">
+        <%= f.label :hra %><br /></font>
+      <%= f.text_field :hra, class:"form-label form-control form-control-lg"%></p>
   </div>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :allowance %><br />
-    <%= f.text_field :allowance, class:"form-label form-control form-control-lg"%>
+    <p style="text-align: center">
+      <font color="#f5f5f5">
+        <%= f.label :allowance %><br /></font>
+      <%= f.text_field :allowance, class:"form-label form-control form-control-lg"%></p>
   </div>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :deduction %><br />
-    <%= f.text_field :deduction, class:"form-label form-control form-control-lg"%>
+    <p style="text-align: center">
+      <font color="#f5f5f5">
+        <%= f.label :deduction %><br /></font>
+      <%= f.text_field :deduction, class:"form-label form-control form-control-lg"%></p>
   </div>
 
   <div class="form-outline form-white mb-4">
-    <%= f.label :total_salary %><br />
-    <%= f.text_field :total_salary, class:"form-label form-control form-control-lg"%>
+    <p style="text-align: center">
+      <font color="#f5f5f5">
+        <%= f.label :total_salary %><br /></font>
+      <%= f.text_field :total_salary, class:"form-label form-control form-control-lg"%></p>
   </div>
 
 <p>
   <div class="actions">
-    <%= f.submit "Update" , class:"btn btn-success" %>
+    <p style="text-align: center">
+
+      <%= f.submit "Update" , class:"btn btn-success" %></p>
   </div></p>
 <% end %>
 

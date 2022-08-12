@@ -1,0 +1,38 @@
+x xs <%= form_tag({controller: "apply",action: "update"},method: "put") do %>
+
+   <font color="#f5f5f5">  <h2 style="text-align: center">Apply Leave</h2></font><br>
+
+
+   <p style="text-align: center">
+     <font color="#f5f5f5">
+<label> Leave Type</label><br>
+
+   <%= select_tag(:type_of_leave, options_for_select([["Sick","sick"],["Privileged","privileged"],["Breavement","breavement"],["Study leave","study_leave"],["Time off","time_off"],["Maternity","maternity"],["Paternity","paternity"],["Optional","optional"]], params[:type_of_leave] ), class:"select") %>
+     </font></p>
+
+   <div class="form-outline form-white mb-4">
+     <p style="text-align: center">
+       <font color="#f5f5f5">
+     <label>No of days:</label><br>
+     <%= text_field_tag :days%><br>
+       </font></p></div>
+
+   <div class="form-outline form-white mb-4">
+     <p style="text-align: center">
+       <font color="#f5f5f5">
+     <label>From date:</label><br>
+     <%= date_field_tag :from_date %><br>
+       </font></p></div>
+
+   <div class="form-outline form-white mb-4">
+     <p style="text-align: center">
+       <font color="#f5f5f5">
+     <label>To date:</label><br>
+     <%= date_field_tag :to_date %><br>
+       </font></p></div>
+<p style="text-align: center">
+   <%= submit_tag "Apply", class:"btn btn-success" %>
+</p>
+
+
+ <% end %>

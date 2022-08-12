@@ -1,4 +1,4 @@
-<h2 style="text-align: center">Basic Details</h2>
+ <font color="#f5f5f5"> <h2 style="text-align: center">Personal Details</h2></font>
 <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
   <style>
 
@@ -7,7 +7,7 @@
           margin: auto;
           border: 2px solid black;
           border-collapse: collapse;
-
+          background-color: lightblue;
 
       }
 
@@ -140,9 +140,10 @@
 <!--  <option value="maternity">maternity</option>-->
 <!--  <option value="study_leave">study_leave</option>-->
 <!--  <option value="breavement">breavement</option>-->
-</select>
-<!--<button><%#= link_to 'Apply Leave', edit_leafe_path(@employee.leave.id), type:"button", class:"btn btn-primary" %></button><br/>-->
+<!--</select>-->
+<button><%= link_to 'Apply Leave', apply_apply_leave_path, type:"button", class:"btn btn-primary" %></button><br/>
 <p>
+  <button><%= link_to 'Leave status', status_edit_path, type:"button", class:"btn btn-primary" %></button>
 <!--  <button><%#= link_to 'Prev Page',details_path(@employee.id), type:"button", class:"btn btn-primary" %></button>-->
 </p>
 

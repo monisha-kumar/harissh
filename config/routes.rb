@@ -5,13 +5,23 @@ Rails.application.routes.draw do
   }
   
 
-  get 'home/index'
+  # get 'home/index'
   root to: "home#index"
   resources :qualifications
-  resources :details ,only:[:show,:destroy,:update,:edit,:new,:create,:index]
+  resources :details
   resources :leaves
   resources :salaries
+  get 'apply/apply_leave'
+  put 'apply/update'
 
 
+
+  # resources :status,only:[:edit,:update]
+  get 'status/edit'
+  put 'status/update'
+
+  # get 'approval/dashboard'
+   get 'approval/dashboard'
+  put 'approval/update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

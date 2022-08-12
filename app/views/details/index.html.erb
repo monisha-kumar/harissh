@@ -1,38 +1,32 @@
-<!-- <h1 style="text-align: center"> Employee Listion Page</h1>-->
-<!--<table style = "width:40%",  border="2" style="border-collapse:collapse">-->
-<!-- <table style="border:1px solid black;margin-left:auto;margin-right:auto;">-->
-<!--   <style>-->
-<!--       table, th, td {-->
-<!--           width: 35%;-->
-<!--           margin: auto;-->
-<!--           border: 2px solid black;-->
-<!--           border-collapse: collapse;-->
+ <h1 style="text-align: center"> Employee Listing Page</h1>
+<table style = "width:40%",  border="2" style="border-collapse:collapse">
 
-<!--       }-->
+ <thead>
+  <tr>
 
-<!--   </style>-->
-<!-- <thead>-->
-<!--  <tr>-->
-<!--    <th>Name</th>-->
-<!--    <th>Address</th>-->
-<!--    <th>Email</th>-->
-<!--    <th colspan="3">Actions</th>-->
-<!--  </tr>-->
-<!--  </thead>-->
+    <th>Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  </thead>
 
-<!--  <tbody  >-->
-  <%# @employees.each do |employee| %>
-<!--    <tr>-->
-<!--      <td><%#= employee.detail.name %> </td>-->
-<!--      <td> <%#= employee.detail.address %> </td>-->
-<!--      <td> <%#= employee.detail.email %> </td>-->
-<!--      <td> <button><%#= link_to 'View', detail_path(employee.id), class:"btn btn-success"%> </button></td>-->
-<!--      <td> <button><%#= link_to 'Edit', edit_detail_path(employee.id), class:"btn btn-info"%></button> </td>-->
-<!--      <td> <%#= button_to 'Delete', detail_path(employee), method: :delete, class:"btn btn-danger" %> </td>-->
-<!--    </tr>-->
+  <tbody  >
+  <% @employees.each do |employee| %>
+    <tr>
+
+      <td><%= employee.detail.name %> </td>
+      <td> <%= employee.detail.address %> </td>
+      <td> <%= employee.detail.email %> </td>
+      <td> <button><%= link_to 'View', detail_path(employee.id), class:"btn btn-success"%> </button></td>
+      <td> <button><%= link_to 'Edit', edit_detail_path(employee.id), class:"btn btn-info"%></button> </td>
+      <td> <%= button_to 'Delete', detail_path(employee), method: :delete, class:"btn btn-danger" %> </td>
+    </tr>
 
 
-  <%# end %>
+  <% end %>
+  </tbody>
+</table>
 <!--  </tbody>-->
 <!--</table>-->
 <!--<p style="text-align: center">-->

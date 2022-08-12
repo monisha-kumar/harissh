@@ -1,0 +1,23 @@
+<font color="#f5f5f5"><h1 style="text-align: center">Leave Status</h1></font>
+
+<% if @leave.nil? %>
+
+  <font color="#f5f5f5"><h3 style="text-align: center">no applied leave</h3></font>
+<%  else  %>
+<%=  form_tag({controller: "status",action: "update"},method: "put") do  %>
+<font color="#f5f5f5">
+<p style="text-align: center"><strong>leave type: </strong><%= @leave.type_of_leave  %></p>
+<p style="text-align: center"><strong>days: </strong><%= @leave.days %></p>
+<p style="text-align: center"><strong>from_date: </strong><%= @leave.from_date  %></p>
+<p style="text-align: center"><strong>to_date: </strong><%= @leave.to_date  %></p>
+    <p style="text-align: center"><strong>Status:</strong> <%= @leave.status %></p>
+</font>
+<% unless @leave.status == "Pending" %>
+      <p style="text-align: center">
+        <%= submit_tag "okay"  %>
+<%  end  %>
+    </p>
+
+  <%  end  %>
+
+<%  end %>

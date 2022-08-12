@@ -1,4 +1,6 @@
- <h2 style="text-align: center"> Employee Listion Page</h2>
+
+<font color="#f5f5f5"> <h2 style="text-align: center"> Employee Listing Page</h2> </font>
+<button><%=link_to 'leave approval', 'approval/dashboard' %></button>
 <table style = "width:40%",  border="2" style="border-collapse:collapse">
    <style>
        table, th, td{
@@ -6,12 +8,21 @@
            margin: auto;
            border: 2px solid black;
            border-collapse: collapse;
-
+           background-color:lightblue;
        }
 
    </style>
+  <style>
+      body {
+          background-image: url('https://shiftin.app/wp-content/uploads/2021/10/what-are-employee-management-systems.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+      }
+  </style>
  <thead>
   <tr>
+    <th>emp_id</th>
     <th>Name</th>
     <th>Address</th>
     <th>Email</th>
@@ -21,7 +32,9 @@
 
   <tbody>
 <% @employees.each do |employee| %>
+
     <tr>
+      <td><%= employee.detail.employee_id %> </td>
       <td><%= employee.detail.name %> </td>
       <td> <%= employee.detail.address %> </td>
       <td> <%= employee.detail.email %> </td>
